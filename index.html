@@ -19,6 +19,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <!-- Typewriter Effect -->
   <script src="https://unpkg.com/typewriter-effect@2.18.1/dist/core.js"></script>
+  
 </head>
 <body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-all">
 
@@ -45,20 +46,43 @@
   <button id="toggle-dark" class="ml-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700">🌙</button>
 </header>
 
-<!-- Hero Section with Typewriter -->
-<section id="home" class="text-center py-24 px-4 bg-gradient-to-r from-blue-100 to-blue-200 dark:from-gray-800 dark:to-gray-700 transition-all">
-  <h2 class="text-5xl font-extrabold mb-4">
-    <span id="typewriter-text"></span>
+<!-- Redesigned Hero Section -->
+<section id="home" class="relative text-center py-32 px-6 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-gray-900 dark:to-gray-800 transition-all duration-500 overflow-hidden">
+  <!-- Animated Background Circles -->
+  <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center -z-10">
+    <div class="w-[800px] h-[800px] bg-blue-300 dark:bg-gray-700 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+  </div>
+
+  <!-- Typewriter and Intro -->
+  <h2 class="text-5xl md:text-6xl font-extrabold mb-6 text-gray-900 dark:text-white">
+    <span id="typewriter-text" class="inline-block"></span>
   </h2>
-  <p class="text-xl mb-6 max-w-2x1 mx-auto">Full Stack Developer with a passion for clean code, sleek design, and user-first experiences.</p>
-  <img src="./assets/WhatsApp Image 2025-04-09 at 10.22.25_d0e796d1.jpg" alt="Keshan" class="mx-auto rounded-full shadow-lg mb-6 border-4 border-white dark:border-gray-700 w-60 h-60" />
-  <div class="mt-4 space-x-4">
-    <!-- Hire Me Button -->
-    <a href="#contact" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition">Hire Me</a>
-    <!-- New Learn More Button -->
-    <a href="#about" class="inline-block px-6 py-3 bg-gray-600 text-white rounded-xl hover:bg-gray-700 transition">Learn More</a>
+  <p class="text-lg md:text-xl max-w-2xl mx-auto text-gray-700 dark:text-gray-300 mb-8 animate-fade-in">
+    I'm a Full Stack Developer passionate about building elegant, scalable, and high-performing digital experiences.
+  </p>
+
+  <!-- Profile Image with Animation -->
+  <img src="./assets/WhatsApp Image 2025-04-09 at 10.22.25_d0e796d1.jpg" alt="Keshan"
+       class="mx-auto rounded-full shadow-2xl border-4 border-white dark:border-gray-700 w-60 h-60 mb-8 transform hover:scale-105 transition duration-500" />
+
+  <!-- CTA Buttons -->
+  <div class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in">
+    <a href="#contact"
+       class="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold transition-all duration-300 shadow-lg">
+      Hire Me
+    </a>
+    <a href="#about"
+       class="px-8 py-3 bg-gray-600 hover:bg-gray-700 text-white rounded-xl font-semibold transition-all duration-300 shadow-lg">
+      Learn More
+    </a>
+  </div>
+
+  <!-- Scroll Down Indicator -->
+  <div class="mt-16 animate-bounce text-blue-600 dark:text-white">
+    <a href="#about" class="text-lg font-medium">Scroll Down ↓</a>
   </div>
 </section>
+
 
 
   <!-- About -->
@@ -69,99 +93,151 @@
     </p>
   </section>
 
+
+<!-- About Cards Section -->
+<section class="bg-gray-100 dark:bg-gray-800 py-16">
+  <div class="max-w-6xl mx-auto text-center px-4 mb-12">
+    <h2 class="text-4xl font-semibold tracking-wide text-black dark:text-white animate__animated animate__fadeInUp animate__delay-0.2s">What I Do</h2>
+    <p class="text-lg text-gray-600 dark:text-gray-300 mt-4 animate__animated animate__fadeInUp animate__delay-0.4s">
+      These are the roles I specialize in, each reflecting my passion for building impactful digital solutions.
+    </p>
+  </div>
+
+  <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-4">
+    <!-- Full Stack Developer -->
+    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 animate__animated animate__fadeInUp animate__delay-0.2s">
+      <img src="./assets/logo1.webp" alt="Full Stack Developer" class="w-full h-48 object-cover">
+      <div class="p-6">
+        <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Full Stack Developer</h3>
+        <p class="text-gray-600 dark:text-gray-300">I build scalable web applications, working on both the front-end and back-end to deliver seamless user experiences.</p>
+      </div>
+    </div>
+
+    <!-- Frontend Developer -->
+    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 animate__animated animate__fadeInUp animate__delay-0.4s">
+      <img src="./assets/logo2.png" alt="Frontend Developer" class="w-full h-48 object-cover">
+      <div class="p-6">
+        <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Frontend Developer</h3>
+        <p class="text-gray-600 dark:text-gray-300">I create engaging, user-friendly interfaces with a focus on design, accessibility, and performance.</p>
+      </div>
+    </div>
+
+    <!-- Backend Developer -->
+    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 animate__animated animate__fadeInUp animate__delay-0.6s">
+      <img src="./assets/logo3.jpg" alt="Backend Developer" class="w-full h-48 object-cover">
+      <div class="p-6">
+        <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Backend Developer</h3>
+        <p class="text-gray-600 dark:text-gray-300">I develop robust server-side logic, databases, and APIs, ensuring smooth data flow and system performance.</p>
+      </div>
+    </div>
+
+    <!-- UI/UX Designer -->
+    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 animate__animated animate__fadeInUp animate__delay-0.8s">
+      <img src="./assets/logo4.jpg" alt="UI/UX Designer" class="w-full h-48 object-cover">
+      <div class="p-6">
+        <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">UI/UX Designer</h3>
+        <p class="text-gray-600 dark:text-gray-300">I focus on creating visually appealing and intuitive designs that enhance user interaction and satisfaction.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
   <!-- Skills -->
   <section id="skills" class=" text-white max-w-4xl mx-auto py-2 px-6">
-    <h2 class="text-4xl font-bold text-center mb-12 tracking-wider text-black dark:text-white">My Skills</h2>
+    <h2 class="text-4xl font-bold text-center mb-12 mt-12 tracking-wider text-black dark:text-white" data-aos="fade-up">My Skills</h2>
     <div class="space-y-16">
       <!-- Frontend -->
       <div>
         <div class="grid justify-center grid-cols-3 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
-          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300">
+          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300" data-aos="fade-up" data-aos-delay="100">
             <img src="./assets/html.svg" alt="HTML" class="w-16 h-16 mb-4 shadow-lg p-2 rounded-full hover:bg-orange-400 hover:text-black">
             <span class="font-semibold text-black dark:text-white">HTML</span>
           </div>
 
-          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300">
+          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300"data-aos="fade-up" data-aos-delay="100">
             <img src="./assets/css.svg" alt="CSS" class="w-16 h-16 mb-4 shadow-lg p-2 rounded-full hover:bg-orange-400 hover:text-black">
             <span class="font-semibold text-black dark:text-white">CSS</span>
           </div>
 
-          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300">
+          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300"data-aos="fade-up" data-aos-delay="100">
             <img src="./assets/javascript.svg" alt="Javascript" class="w-16 h-16 mb-4 shadow-lg p-2 hover:bg-orange-400 hover:text-black">
             <span class="font-semibold text-black dark:text-white">JavaScript</span>
           </div>
 
-          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300">
+          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300"data-aos="fade-up" data-aos-delay="100">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="w-16 h-16 mb-4 shadow-lg p-2 rounded-full hover:bg-orange-400 hover:text-black">
             <span class="font-semibold text-black dark:text-white">React</span>
           </div>
 
-          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300">
+          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300"data-aos="fade-up" data-aos-delay="100">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" class="w-16 h-16 mb-4 shadow-lg p-2 rounded-full hover:bg-orange-400 hover:text-black">
             <span class="font-semibold text-black dark:text-white">Next.js</span>
           </div>
 
-          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300">
+          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300"data-aos="fade-up" data-aos-delay="100">
             <img src="./assets/bootstrap.svg" alt="Bootstrap" class="w-16 h-16 mb-4 shadow-lg p-2 rounded-full hover:bg-orange-400 hover:text-black">
             <span class="font-semibold text-black dark:text-white">Bootstrap</span>
           </div>
 
-          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300">
+          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300"data-aos="fade-up" data-aos-delay="100">
             <img src="./assets/figma.svg" alt="Figma" class="w-16 h-16 mb-4 shadow-lg p-2 rounded-full hover:bg-orange-400 hover:text-black">
             <span class="font-semibold text-black dark:text-white">Figma</span>
           </div>
 
-          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300">
+          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300"data-aos="fade-up" data-aos-delay="100">
             <img src="./assets/jquery.svg" alt="jQuery" class="w-16 h-16 mb-4 shadow-lg p-2 rounded-full hover:bg-orange-400 hover:text-black">
             <span class="font-semibold text-black dark:text-white">jQuery</span>
           </div>
 
-          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300">
+          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300"data-aos="fade-up" data-aos-delay="100">
             <img src="./assets/tailwind.svg" alt="Tailwind CSS" class="w-16 h-16 mb-4 shadow-lg p-2 rounded-full hover:bg-orange-400 hover:text-black">
             <span class="text-center font-semibold text-black dark:text-white">Tailwind CSS</span>
           </div>
 
-          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300">
+          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300"data-aos="fade-up" data-aos-delay="100">
             <img src="./assets/vue.svg" alt="Vue.js" class="w-16 h-16 mb-4 shadow-lg p-2 rounded-full hover:bg-orange-400 hover:text-black">
             <span class="text-center font-semibold text-black dark:text-white">Vue.js</span>
           </div>
 
-          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300">
+          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300"data-aos="fade-up" data-aos-delay="100">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="w-16 h-16 mb-4 shadow-lg p-2 rounded-full hover:bg-orange-400 hover:text-white">
             <span class="font-semibold text-black dark:text-white">Node.js</span>
           </div>
 
-          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300">
+          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300"data-aos="fade-up" data-aos-delay="100">
             <img src="./assets/expressjs-logo.svg" alt="Express.js" class="w-16 h-16 mb-4 shadow-lg p-2 rounded-full hover:bg-orange-400 hover:text-white">
             <span class="font-semibold text-black dark:text-white">Express.js</span>
           </div>
 
-          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300">
+          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300"data-aos="fade-up" data-aos-delay="100">
             <img src="./assets/git.svg" alt="Git" class="w-16 h-16 mb-4 shadow-lg p-2 rounded-full hover:bg-orange-400 hover:text-white">
             <span class="font-semibold text-black dark:text-white">Git</span>
           </div>
 
-          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300">
+          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300"data-aos="fade-up" data-aos-delay="100">
             <img src="./assets/postgres.svg" alt="PostgreSQL" class="w-16 h-16 mb-4 shadow-lg p-2  hover:bg-orange-400 hover:text-white">
             <span class="font-semibold text-black dark:text-white">PostgreSQL</span>
           </div>
 
-          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300">
+          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300"data-aos="fade-up" data-aos-delay="100">
             <img src="./assets/mongodb.svg" alt="MongoDB" class="w-16 h-16 mb-4 shadow-lg p-2 rounded-full hover:bg-orange-400 hover:text-white">
             <span class="font-semibold text-black dark:text-white">Mongo DB</span>
           </div>
 
-          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300">
+          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300"data-aos="fade-up" data-aos-delay="100">
             <img src="./assets/sql.svg" alt="SQL" class="w-16 h-16 mb-4 shadow-lg p-2 rounded-full hover:bg-orange-400 hover:text-white">
             <span class="font-semibold text-black dark:text-white">SQL</span>
           </div>
 
-          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300">
+          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300"data-aos="fade-up" data-aos-delay="100">
             <img src="./assets/python.svg" alt="Python" class="w-16 h-16 mb-4 shadow-lg p-2 rounded-full hover:bg-orange-400 hover:text-white">
             <span class="font-semibold text-black dark:text-white">Python</span>
           </div>
 
-          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300">
+          <div class="flex flex-col items-center transition-transform transform hover:scale-110 duration-300"data-aos="fade-up" data-aos-delay="100">
             <img src="./assets/vscode.svg" alt="Python" class="w-16 h-16 mb-4 shadow-lg p-2 rounded-full hover:bg-orange-400 hover:text-white">
             <span class="font-semibold text-black dark:text-white mb-12">VS Code</span>
           </div>
@@ -172,13 +248,13 @@
 
   <!-- Projects -->
   <div id="projects" class="bg-gray-100 dark:bg-gray-800 py-24">
-    <div class="text-center mb-16">
+    <div class="text-center mb-16"data-aos="zoom-in">
       <h2 class="text-4xl font-semibold tracking-wide text-black dark:text-white">My Projects</h2>
       <p class="text-lg text-gray-600 dark:text-gray-300 mt-4 ml-4 mr-4">Here are a few projects I've worked on. Click on the project title for more details.</p>
     </div>
     <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
       <!-- Project 1 -->
-      <div class="mr-4 ml-4 bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden">
+      <div class="mr-4 ml-4 bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden"data-aos="fade-up" data-aos-delay="100">
         <img src="project1.jpg" alt="Project 1" class="w-full h-48 object-cover" />
         <div class="p-6">
           <h3 class="text-2xl font-semibold text-gray-800 dark:text-white">Project 1</h3>
@@ -187,7 +263,7 @@
         </div>
       </div>
       <!-- Project 2 -->
-      <div class="mr-4 ml-4 bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden">
+      <div class="mr-4 ml-4 bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
         <img src="project2.jpg" alt="Project 2" class="w-full h-48 object-cover" />
         <div class="p-6">
           <h3 class="text-2xl font-semibold text-gray-800 dark:text-white">Project 2</h3>
@@ -196,11 +272,11 @@
         </div>
       </div>
       <!-- Project 3 -->
-      <div class="mr-4 ml-4 mb-10 bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden">
-        <img src="project3.jpg" alt="Project 3" class="w-full h-48 object-cover" />
+      <div class="mr-4 ml-4 bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+        <img src="project2.jpg" alt="Project 2" class="w-full h-48 object-cover" />
         <div class="p-6">
           <h3 class="text-2xl font-semibold text-gray-800 dark:text-white">Project 3</h3>
-          <p class="text-gray-600 dark:text-gray-300 mt-2">An e-commerce platform built with Next.js and PostgreSQL for the database.</p>
+          <p class="text-gray-600 dark:text-gray-300 mt-2">This project involved building a dynamic web application with React and Node.js.</p>
           <a href="#" class="text-blue-600 hover:underline mt-4 inline-block">View Project</a>
         </div>
       </div>
@@ -223,25 +299,25 @@
       </a>
 
       <!-- LinkedIn -->
-      <a href="https://www.linkedin.com/in/keshan-dev" target="_blank" class="group flex flex-col items-center">
+      <a href="https://www.linkedin.com/in/keshan" target="_blank" class="group flex flex-col items-center">
         <img src="./assets/linkdln.svg" alt="LinkedIn" class="w-10 h-10 mb-2 transition-transform transform group-hover:scale-110" />
         <span class="text-sm text-gray-800 dark:text-white group-hover:text-blue-600">LinkedIn</span>
       </a>
 
       <!-- GitHub -->
-      <a href="https://github.com/keshangamage" target="_blank" class="group flex flex-col items-center">
+      <a href="https://github.com/keshan" target="_blank" class="group flex flex-col items-center">
         <img src="./assets/github.svg" alt="GitHub" class="w-10 h-10 mb-2 transition-transform transform group-hover:scale-110" />
         <span class="text-sm text-gray-800 dark:text-white group-hover:text-blue-600">GitHub</span>
       </a>
 
       <!-- Twitter -->
-      <a href="https://x.com/keshan_07" target="_blank" class="group flex flex-col items-center">
+      <a href="https://twitter.com/keshan" target="_blank" class="group flex flex-col items-center">
         <img src="./assets/x.svg" alt="Twitter" class="w-10 h-10 mb-2 transition-transform transform group-hover:scale-110" />
         <span class="text-sm text-gray-800 dark:text-white group-hover:text-blue-600">Twitter</span>
       </a>
 
       <!-- Instagram -->
-      <a href="https://instagram.com/keshan_g2" target="_blank" class="group flex flex-col items-center">
+      <a href="https://instagram.com/keshan" target="_blank" class="group flex flex-col items-center">
         <img src="./assets/instegram.svg" alt="Instagram" class="w-10 h-10 mb-2 transition-transform transform group-hover:scale-110" />
         <span class="text-sm text-gray-800 dark:text-white group-hover:text-blue-600">Instagram</span>
       </a>
@@ -282,7 +358,10 @@
     });
 
     // AOS (Animate On Scroll)
-    AOS.init();
+    AOS.init({
+    duration: 1000,
+    once: true,
+  });
   </script>
 
   <!-- Scroll Up Button -->
